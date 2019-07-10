@@ -24,20 +24,16 @@
 
 		}
 	%>
+	<nav class="navbar navbar-light bg-light justify-content-between pb-0 pt-0">
+	<form class="form-inline"> <button class="btn btn-secondary ml-3 my-2 my-sm-0" type="submit" formaction="Product" formmethod="post">Back</button>
+	</form>
+  <h4 class="navbar-brand form-text pl-3"><%=session.getAttribute("username")%>&nbsp; Your Cart contains the Following list &nbsp;</h4>
+  <form class="form-inline">
+ <button class="btn btn-outline-danger ml-3 my-2 my-sm-0" type="submit" formaction="Logout">Logout</button>
+  </form>
+</nav>
 
-	<div>
-		<form>
-			<div>
-				<ul style="padding-inline-start: 0;">
-				<li class="left"><input
-						type="submit" value="Back" formaction="Product" formmethod="post"></li>
-					<li class="left" id="center"><%=session.getAttribute("username")%>
-						&nbsp; Your Cart contains the Following list &nbsp;</li>
-					
-					<li style="float: right; border-left: 1px solid #bbb;"><input
-						type="submit" value="Logout" formaction="Logout"></li>
-				</ul>
-			</div>
+	
 		</form>
 	</div>
 
@@ -63,7 +59,7 @@
 					
 				<td><form method="post">
 				<input type="hidden" name="productid" value="${a.productid}">
-				<input type="submit" formaction="delete" value="Delete" style="border: 1px solid #aaa; border-radius: 20px; background: red;">
+				<button type="submit" formaction="delete" class="btn btn-danger"">Delete</button>
 				</form>
 				</td>	
 				</tr>
@@ -75,10 +71,11 @@
 	<div>
 	<h4>Your total is $ ${total} &nbsp;
 	<form method="post">
-	<input type="submit" value="Checkout" formaction="checkout" style="border: 1px solid #aaa; border-radius: 20px; background: red;">
+	<button type="submit" formaction="checkout" class="btn btn-success" >Checkout</button>
 	</form>
 	</h4>
 	</div>
+<h3 class="h4">	${insufficient}</h3>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

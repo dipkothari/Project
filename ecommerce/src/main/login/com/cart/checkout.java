@@ -20,13 +20,18 @@ public class checkout extends HttpServlet {
 		HttpSession session = request.getSession();
 		String username = (String) session.getAttribute("username");
 		checkoutDao cd = new checkoutDao();
-		cd.checkout(username);
+		String msg = cd.checkout(username);
+		if(msg.equals("Sorry")) {
+			request.setAttribute("insufficient", "Sorry item you selected is in less quantity");
+			RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
+			rd.forward(request, response);
+		}
+		else {
 		cartpDao cr = new cartpDao();
 		List<cartModel> cm = cr.getProduct(username);
 		session.setAttribute("cart", cm);
-		
 		response.sendRedirect("cart.jsp");
-		
+		}
 	}
 
 }

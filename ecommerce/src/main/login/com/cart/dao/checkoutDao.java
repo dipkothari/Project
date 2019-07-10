@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class checkoutDao {
-	public void checkout(String username) {
+	public String checkout(String username) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/deep","root","Kothari_1");
@@ -24,15 +24,16 @@ public class checkoutDao {
 					int productcount = rs1.getInt(4);
 					
 					int totalcount = productcount-cartcount;
-					
+					if(totalcount>=0) {
 					Statement st2 = con.createStatement();
 					st2.executeUpdate("update product set productquantity='"+totalcount+"' where productid ='"+cartid+"'");
-				}
-					else {
-						System.out.println("Sorry");
 					}
-				
-				
+					
+					else {
+						return "Sorry";
+					}
+					
+				}
 			}
 			Statement st3 = con.createStatement();
 			st3.executeUpdate("delete from cart where username='"+username+"'"); 
@@ -42,5 +43,6 @@ public class checkoutDao {
 		catch(Exception e) {
 			
 		}
+		return username;
 	}
 }
