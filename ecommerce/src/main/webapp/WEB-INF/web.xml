@@ -1,0 +1,77 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>com.login.Login</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>com.login.Logout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Product</servlet-name>
+  	<display-name>Product</display-name>
+  	<description></description>
+  	<servlet-class>com.product.Product</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>addServlet</servlet-name>
+  	<display-name>addServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.cart.addServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>cart</servlet-name>
+  	<display-name>cart</display-name>
+  	<description></description>
+  	<servlet-class>com.cart.cart</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>delete</servlet-name>
+  	<display-name>delete</display-name>
+  	<description></description>
+  	<servlet-class>com.cart.delete</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>checkout</servlet-name>
+  	<display-name>checkout</display-name>
+  	<description></description>
+  	<servlet-class>com.cart.checkout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Product</servlet-name>
+  	<url-pattern>/Product</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>addServlet</servlet-name>
+  	<url-pattern>/addServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>cart</servlet-name>
+  	<url-pattern>/cart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>delete</servlet-name>
+  	<url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>checkout</servlet-name>
+  	<url-pattern>/checkout</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

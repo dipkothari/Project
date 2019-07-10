@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+
+
+body{
+	margin:0;
+	padding:0;
+	background: url('../IMG.jpg') no-repeat center center fixed; 
+  	background-size: cover;
+}
+input[type="text"]
+{
+	
+    font-size:20px;
+    width : 95%;
+    background: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid blue;
+}
+table{
+	width: 350px;
+	height: 210px;
+	
+}
+input[type="password"]
+{
+	
+    font-size:20px;
+    box-sizing: border-box;
+    background: transparent;
+    width : 95%;
+    border:none;
+     color: white;
+    border-bottom: 1px solid blue;
+    
+}
+input[type="submit"]
+{
+	width: 95%;
+	background-color: #9797C5;
+    font-size:20px;
+    margin-bottom: 10px;
+    border-radius:15px;
+    cursor: pointer;
+    
+}
+.transparent{
+	color: white;
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	top: 50%;
+	left: 50%;
+	transform : translate(-50%,-50%);
+}
+
+
+
+
