@@ -48,7 +48,7 @@
 	
 	<td>${a.productid}</td>
 	
-	<td>${ a.productname}</td>
+	<td>${a.productname}</td>
 	
 	<td>${a.productprice}</td>
 	
@@ -62,7 +62,7 @@
 		<div class="input-group">
 		<input type="number" min="1" max="${a.productquantity}" name="productquantity" class="form-control mr-sm-2">&nbsp;
 		<div class="input-group-append">
-		<button type="submit" class="btn btn-outline-light">AddCart</button>
+		<button type="submit" class="btn btn-outline-light"> addcart </button>
 		</div>
 		</div>
 		</form>

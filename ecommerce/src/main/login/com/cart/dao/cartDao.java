@@ -1,7 +1,6 @@
 package com.cart.dao;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -29,7 +28,7 @@ public class cartDao {
 			else
 			{
 				rowcount=st.executeUpdate("INSERT INTO cart VALUES ('"+username+"','"+id+"', '"+name+"', '"+total+"', '"+quantity+"')");
-
+ 
 			}
 			
 		}

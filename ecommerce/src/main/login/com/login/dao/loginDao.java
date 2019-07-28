@@ -29,7 +29,7 @@ public class loginDao {
 				
 				st.setString(1,name);
 				st.setString(2,pass);
-				
+						
 				 re = st.executeQuery();
 				
 				
